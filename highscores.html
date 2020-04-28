@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHECK HIGH SCORES</title>
+
+    <style>
+        h1, h2, a, span {
+            color: whitesmoke;
+        }
+        
+        #score-list {
+            font-size: 1.2rem;
+            color: dimgrey;    
+        }
+        ol {
+            list-style: none;
+            counter-reset: li;
+        }
+        
+        li {
+            counter-increment: li;
+        }
+        
+        li::before {
+            content: "." counter(li);
+            color: rgb(17, 1, 17);
+            display: inline-block;
+            width: 1rem;
+            margin-left: -1.5rem;
+            margin-right: 0.5rem;
+            text-align: right;
+            direction: rtl;
+        }
+        
+        hr {
+            height: 10px;
+            background-color: rgb(100, 128, 0);
+        }
+        
+        #scoresTitle {
+            padding-left: 10rem;
+            background-color: brown;
+        </style> 
+
+</head>
+<body>
+    <div class="row justify-content-center mt-5 pt-3 pb-3">
+            <div class="col-10 col-lg-8">
+                <h1 id="scoresTitle">High Scores</h1> <hr>
+                <ol id='score-list' class="mb-4"></ol>
+                <button type="button" class="btn btn-info btn-sm restartBtn">Restart Here</button>
+                <button type="button" class="btn btn-info btn-sm clearBtn">Clear Scores Here</button>
+            </div>
+</body>
+</html>
